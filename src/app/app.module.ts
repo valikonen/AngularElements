@@ -3,12 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
+import { DataGridModule } from 'primeng/primeng';
+
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    DataGridModule
   ],
   providers: [],
   bootstrap: [AppComponent]
