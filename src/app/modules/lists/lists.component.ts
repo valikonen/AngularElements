@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({    
-    templateUrl: ``
+    template: ``
 })
 export class ListsComponent implements OnInit {
 

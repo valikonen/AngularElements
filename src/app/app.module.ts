@@ -21,6 +21,6 @@ import { ListsModule } from './modules/lists/lists.module';
     ListsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
