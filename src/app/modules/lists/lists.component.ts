@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component({    
-    template: ``
+@Component({ 
+    selector: 'lists',   
+    template: `<p>Lists...</p>`
 })
 export class ListsComponent implements OnInit {
 
