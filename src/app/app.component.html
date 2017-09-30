@@ -1,7 +1,24 @@
 <ul>
     <li><a routerLink="/lists">Lists</a></li>
 </ul>
+
+<h1 translate>Title</h1>
+<div>
+    {{ 'Intro' | translate:user }}
+</div>
+
+<div>
+    {{ 'Startpage.TranslationSections' | translate }}
+  </div>
   
+  <div>
+    {{ 'Aboutpage.TranslationSections' | translate }}
+  </div>
+
+  <select #langSelect (change)="translate.use(langSelect.value)">
+    <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
+  </select>
+
 <router-outlet></router-outlet>
 
 

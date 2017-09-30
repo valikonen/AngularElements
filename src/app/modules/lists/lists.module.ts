@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { RouterModule } from '@angular/router';
 
@@ -21,6 +22,9 @@ import { ListsService } from './services/lists.service';
         DataGridModule,
         DataTableModule, 
         SharedModule
+    ],
+    exports: [
+        TranslateModule
     ],
     declarations: [ 
         ListsComponent 
