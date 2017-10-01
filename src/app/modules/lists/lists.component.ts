@@ -8,7 +8,7 @@ import { ListsService } from './services/lists.service';
 
 @Component({ 
     selector: 'lists',   
-    templateUrl: './list.component.html' 
+    templateUrl: './lists.component.html' 
 })
 export class ListsComponent implements OnInit {
 

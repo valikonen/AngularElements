@@ -1,0 +1,20 @@
+<p-dataTable [value]="lists" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
+    
+    <p-column field="id" header="ID" [sortable]="true">
+        <ng-template let-row="rowData" pTemplate type="body">
+            <a routerLink="/lists/{{row.id}}">{{row.name}}</a>
+        </ng-template>
+    </p-column>
+        
+    
+    <p-column field="reference" header="Reference" [sortable]="true">
+        <ng-template let-row="rowData" pTemplate type="body">
+            <a routerLink="/lists/{{row.id}}">{{row.reference}}</a>
+        </ng-template>
+    </p-column>
+
+    <p-column field="shortName" header="Short Name" [sortable]="true"></p-column>
+    <p-column field="name" header="Name" [sortable]="true"></p-column>
+</p-dataTable>
+
+<router-outlet></router-outlet>
