@@ -19,6 +19,10 @@
     <option *ngFor="let lang of translate.getLangs()" [value]="lang" [selected]="lang === translate.currentLang">{{ lang }}</option>
   </select>
 
+  <hr>
+    <p-breadcrumb [model]="items"></p-breadcrumb>
+  <hr>
+
 <router-outlet></router-outlet>
 
 

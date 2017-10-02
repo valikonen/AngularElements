@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataGridModule } from 'primeng/primeng';
 import { DataTableModule, SharedModule } from 'primeng/primeng';
 
+
 import { ListsComponent } from './lists.component';
 import { ListsService } from './services/lists.service';
 
@@ -28,14 +29,14 @@ import { ListItemService } from './list-item/services/list-item.service';
                         component: ListsComponent
                     },
                     {
-                        path: ':id',
+                        path: ':listId',
                         component: ListItemComponent
                     }
                 ]
             }
         ]),
         DataGridModule,
-        DataTableModule, 
+        DataTableModule,
         SharedModule
     ],
     exports: [

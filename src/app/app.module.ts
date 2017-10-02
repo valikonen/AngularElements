@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 
 import { HttpModule } from '@angular/http';
 
+import { BreadcrumbModule } from 'primeng/primeng';
+
 import 'rxjs/add/operator/map';
 
 import { AppComponent } from './app.component';
@@ -43,6 +45,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     RouterModule,
     HttpModule,
     DataGridModule,
+    BreadcrumbModule,
     AppRoutingModule,
     ListsModule
   ],
