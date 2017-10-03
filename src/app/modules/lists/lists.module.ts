@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataGridModule } from 'primeng/primeng';
 import { DataTableModule, SharedModule } from 'primeng/primeng';
 
+import { BreadcrumbService } from '../../common/services/breadcrumb.service';
 
 import { ListsComponent } from './lists.component';
 import { ListsService } from './services/lists.service';
@@ -48,7 +49,8 @@ import { ListItemService } from './list-item/services/list-item.service';
     ],
     providers: [ 
         ListsService,
-        ListItemService 
+        ListItemService,
+        BreadcrumbService
     ]
 })
 export class ListsModule { }

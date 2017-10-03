@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
-import { BreadcrumbModule, MenuItem } from 'primeng/primeng';
+import { BreadcrumbService } from '../../../common/services/breadcrumb.service';
 
 import { ListItemService } from './services/list-item.service';
 import { Lists } from '../models/lists.model';
@@ -16,7 +16,8 @@ export class ListItemComponent implements OnInit {
 
     constructor(private _listItemService: ListItemService,
                 private _activatedRoute: ActivatedRoute,
-                private _router: Router) { }
+                private _router: Router,
+                private _breadcrumbService: BreadcrumbService) { }
 
     ngOnInit() { 
         let listId = this._activatedRoute.params['listId'];
@@ -26,8 +27,11 @@ export class ListItemComponent implements OnInit {
             .subscribe(listData => {
                 this.list = listData
             });
-        this.items = [];
-        this.items.push({label: `Lists ${listId}`, url: `/lists/${listId}`}); 
+            
+        if(listId) {
+            console.log("listId: ", listId);
+            this._breadcrumbService.items.push({label: `Lists ${listId}`, url: `/lists/${listId}`}); 
+        }
     }
 
     onUpdateList() {

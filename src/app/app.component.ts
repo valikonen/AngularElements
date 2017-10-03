@@ -3,21 +3,24 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { TranslateService } from '@ngx-translate/core';
 
-import { BreadcrumbModule, MenuItem } from 'primeng/primeng';
+import { BreadcrumbService } from './common/services/breadcrumb.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
+
+    items = [];
+
     title = 'app';
     param = { 
       value: 'world'
     };
-    public items: MenuItem[];
   
     constructor(private _activatedRoute: ActivatedRoute, 
-                private translate: TranslateService) {
+                private translate: TranslateService,
+                private _breadcrumbService: BreadcrumbService) {
 
         translate.addLangs(["en", "fr"]);
         translate.setDefaultLang('en');
@@ -27,9 +30,8 @@ export class AppComponent implements OnInit {
 
     }
 
-    ngOnInit() {     
-        this.items = [];       
-        this.items.push({label:'Lists', url: '/lists'});      
+    ngOnInit() {  
+        this.items = this._breadcrumbService.getBreadcrumb();
     }
     
 }
