@@ -1,0 +1,14 @@
+.navbar-inverse {
+  background: #727272;
+  margin:0;
+  border-radius: 0;
+  border: none;
+}
+
+.navbar-inverse .navbar-nav .active-link,.navbar-inverse .navbar-nav .active-link:hover {
+  background-color: #00a372;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color: white;
+}

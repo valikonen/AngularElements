@@ -1,0 +1,16 @@
+<nav class="navbar navbar-inverse no-margin" role="navigation">
+  <div>
+    <ul class="nav navbar-nav">
+      <li *ngFor="let item of items">
+          <a routerLink="{{item.url}}" routerLinkActive="active-link">{{item.label}}</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<ol class="breadcrumb">
+    <li *ngFor="let item of items">
+      <a *ngIf="item.url" routerLink="{{item.url}}">{{item.label}}</a>
+    </li>
+  </ol>
+

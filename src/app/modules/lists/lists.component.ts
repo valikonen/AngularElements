@@ -6,9 +6,9 @@ import { Footer } from 'primeng/primeng';
 import { Lists } from './models/lists.model';
 import { ListsService } from './services/lists.service';
 
-@Component({ 
-    selector: 'lists',   
-    templateUrl: './lists.component.html' 
+@Component({
+    selector: 'lists',
+    templateUrl: './lists.component.html'
 })
 export class ListsComponent implements OnInit {
 
@@ -18,12 +18,12 @@ export class ListsComponent implements OnInit {
 
     }
 
-    ngOnInit() { 
+    ngOnInit() {
         this._listsService.getLists().subscribe( lists => {
             this.lists = lists;
-            console.log("lists: ", this.lists);
+           // console.log("lists: ", this.lists);
         });
-        
+
     }
 
 }
