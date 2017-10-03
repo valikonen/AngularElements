@@ -21,6 +21,8 @@ import { DataGridModule } from 'primeng/primeng';
 import { ListsModule } from './modules/lists/lists.module';
 
 import { AppRoutingModule } from './app-routing.module';
+import { NavbarComponent } from './modules/navbar/navbar.component';
+import { RecordsComponent } from './modules/records/records.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -28,7 +30,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    RecordsComponent
   ],
   imports: [
     BrowserModule,

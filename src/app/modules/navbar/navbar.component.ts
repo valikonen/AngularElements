@@ -15,8 +15,8 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.items = [];
     this.items.push({label:'Lists', url: '/lists'});
-    this.items.push({label:'Enregistrements', url:'/records'});
-    this.items.push({label: 'Administration', url:'/something'})
+    // this.items.push({label:'Enregistrements', url:'/records'});
+    // this.items.push({label: 'Administration', url:'/something'})
   }
 
 }
