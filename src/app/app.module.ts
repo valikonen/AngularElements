@@ -22,6 +22,8 @@ import { ListsModule } from './modules/lists/lists.module';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { BreadcrumbService } from './common/services/breadcrumb.service';
+
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
 }
@@ -49,7 +51,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AppRoutingModule,
     ListsModule
   ],
-  providers: [],
+  providers: [
+    BreadcrumbService
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
