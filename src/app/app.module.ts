@@ -25,6 +25,7 @@ import { NavbarComponent } from './modules/navbar/navbar.component';
 import { RecordsComponent } from './modules/records/records.component';
 
 import { BreadcrumbService } from './common/services/breadcrumb.service';
+import { TranslatePipe } from './common/translate.pipe';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -34,7 +35,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     AppComponent,
     NavbarComponent,
-    RecordsComponent
+    RecordsComponent,
+    TranslatePipe
   ],
   imports: [
     BrowserModule,
