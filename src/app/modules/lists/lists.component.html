@@ -1,3 +1,6 @@
+<div>
+    {{ 'Startpage.TranslationSections' | translate }}
+  </div>
 
 <p-dataTable [value]="lists" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
     
@@ -14,7 +17,7 @@
         </ng-template>
     </p-column>
 
-    <p-column field="shortName" header="Short Name" [sortable]="true"></p-column>
+    <p-column field="shortName" header="{{'grid_lists.short_name' | translate}}" [sortable]="true"></p-column>
     <p-column field="name" header="Name" [sortable]="true"></p-column>
 </p-dataTable>
 

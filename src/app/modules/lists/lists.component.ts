@@ -19,12 +19,14 @@ export class ListsComponent implements OnInit {
 
     lists: Lists[];
 
-    constructor( private toastr: ToastsManager,
+    constructor( private translate: TranslateService,
+                 private toastr: ToastsManager,
                  vcr: ViewContainerRef,
                  private _listsService: ListsService,
                  private _breadcrumbService: BreadcrumbService ) {
 
         this.toastr.setRootViewContainerRef(vcr);
+        
 
     }
 
