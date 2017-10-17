@@ -16,7 +16,7 @@ export class ListItemService {
      */
     getListItem(listId: number): Observable<Lists[]> {
         return this._http
-                   .get(`http://iwillsurvive.getsandbox.com/lists/${listId}`)
+                   .get(`http://juan-regliss.getsandbox.com/lists/${listId}`)
                    .map(res => res.json())
     }
 
@@ -25,7 +25,7 @@ export class ListItemService {
      */
     updateList(list: Lists): Observable<Lists> {
         return this._http
-                   .put(`http://iwillsurvive.getsandbox.com/lists`, list)
+                   .put(`http://juan-regliss.getsandbox.com/lists`, list)
                    .map( res => res.json())
     }
 

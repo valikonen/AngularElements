@@ -13,25 +13,28 @@ export class ListItemComponent implements OnInit {
     
     list;
     items;
+    listId: number;
 
     constructor(private _listItemService: ListItemService,
                 private _activatedRoute: ActivatedRoute,
                 private _router: Router,
-                private _breadcrumbService: BreadcrumbService) { }
+                private _breadcrumbService: BreadcrumbService) { 
+
+                    _activatedRoute.params.subscribe(params => {
+                        let listId = params.listId;
+                        this._breadcrumbService.items.push({label: `Lists ${listId}`, url: `/lists/${listId}`}); 
+                    });
+                    
+                }
 
     ngOnInit() { 
-        let listId = this._activatedRoute.params['listId'];
-
+        
         this._listItemService
-            .getListItem(listId)
+            .getListItem(this.listId)
             .subscribe(listData => {
                 this.list = listData
             });
-            
-        if(listId) {
-            console.log("listId: ", listId);
-            this._breadcrumbService.items.push({label: `Lists ${listId}`, url: `/lists/${listId}`}); 
-        }
+        
     }
 
     onUpdateList() {

@@ -1,3 +1,4 @@
+
 <p-dataTable [value]="lists" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
     
     <p-column field="id" header="ID" [sortable]="true">
@@ -16,5 +17,7 @@
     <p-column field="shortName" header="Short Name" [sortable]="true"></p-column>
     <p-column field="name" header="Name" [sortable]="true"></p-column>
 </p-dataTable>
+
+<button class="btn btn error" (click)="showToastrError()">Show error toastr</button>
 
 <router-outlet></router-outlet>

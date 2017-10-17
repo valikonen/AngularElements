@@ -12,7 +12,7 @@ export class ListsService {
 
     getLists(): Observable<Lists[]> {
         return this._http
-                   .get('http://iwillsurvive.getsandbox.com/lists')
+                   .get('http://juan-regliss.getsandbox.com/lists')
                    .map(res => res.json())
     }
 
