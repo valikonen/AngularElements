@@ -19,7 +19,15 @@
 
     <p-column field="shortName" header="{{'grid_lists.short_name' | translate}}" [sortable]="true"></p-column>
     <p-column field="name" header="Name" [sortable]="true"></p-column>
+    <p-column>
+        <ng-template let-row="rowData" let-i="rowIndex" pTemplate="body">
+            <button pButton (click)="deleteRow(row)" icon="fa fa-trash-o"> </button>
+        </ng-template>
+    </p-column>
+
 </p-dataTable>
+
+<p-confirmDialog id="popupBorrar" header="Confirmation" width="425" acceptLabel="Add" #cd></p-confirmDialog>
 
 <button class="btn btn error" (click)="showToastrError()">Show error toastr</button>
 

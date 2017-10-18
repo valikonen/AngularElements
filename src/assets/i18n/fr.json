@@ -8,6 +8,7 @@
         "TranslationSections": "Nous sommes letsboot"
     },
     "grid_lists": {
-        "short_name": "Short Name FR"
+        "short_name": "Short Name FR",
+        "dialog_delete_list": "Êtes-vous sûr de vouloir supprimer cette liste?"
     }
 }

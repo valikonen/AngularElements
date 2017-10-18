@@ -20,7 +20,7 @@ import 'rxjs/add/operator/map';
 
 import { AppComponent } from './app.component';
 
-import { DataGridModule } from 'primeng/primeng';
+// import { DataGridModule } from 'primeng/primeng';
 import { ListsModule } from './modules/lists/lists.module';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -56,7 +56,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     
     RouterModule,
     HttpModule,
-    DataGridModule,
+    // DataGridModule,
     BreadcrumbModule,
     AppRoutingModule,
     ListsModule

@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DataGridModule } from 'primeng/primeng';
 import { DataTableModule, SharedModule } from 'primeng/primeng';
+import { ConfirmDialogModule, ConfirmationService } from 'primeng/primeng';
 
 import { BreadcrumbService } from '../../common/services/breadcrumb.service';
 
@@ -40,7 +41,9 @@ import { ListItemService } from './list-item/services/list-item.service';
         DataGridModule,
         DataTableModule,
         SharedModule,
-        TranslateModule
+        TranslateModule,
+        
+        ConfirmDialogModule
     ],
     exports: [
         TranslateModule
@@ -52,7 +55,9 @@ import { ListItemService } from './list-item/services/list-item.service';
     providers: [ 
         ListsService,
         ListItemService,
-        BreadcrumbService
+        BreadcrumbService,
+        
+        ConfirmationService
     ]
 })
 export class ListsModule { }
