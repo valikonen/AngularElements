@@ -45,6 +45,22 @@ export class ListsComponent implements OnInit {
     showToastrError(){
         this.toastr.error('We have a lot errors :DDD')
     }
+
+    /**
+     * Add list
+     */
+    addList(){
+        
+            this.lists = this.lists.concat([{
+                "id": 12,
+                "reference": "Reference..",
+                "shortName": "Short name here...",
+                "name": "List name"  
+            }]);
+            console.log(this.lists);
+       
+    }
+
     /**
      * Delete GRID row
      */
@@ -60,9 +76,9 @@ export class ListsComponent implements OnInit {
                 this.lists = this.lists.filter(function(row) {
                     return row.id != index.id;
                 });
+                this.toastr.success('Iteam was removed')
             }
         });
-        
     }
     
 

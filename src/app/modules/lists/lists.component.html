@@ -1,6 +1,44 @@
 <div>
-    {{ 'Startpage.TranslationSections' | translate }}
-  </div>
+{{ 'Startpage.TranslationSections' | translate }}
+</div>
+
+<form>
+    <div class="row">
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="">ID</label>
+                <input type="text" class="form-control" name="" id="">
+            </div>        
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="">Reference</label>
+                <input type="text" class="form-control" name="" id="">
+            </div>        
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="">Short name</label>
+                <input type="text" class="form-control" name="" id="">
+            </div>        
+        </div>
+        <div class="col-sm-2">
+            <div class="form-group">
+                <label for="">Name</label>
+                <input type="text" class="form-control" name="" id="">
+            </div>        
+        </div>
+
+        <div class="col-sm-2">
+            <div class="form-group">
+                <button (click)="addList()">Add</button>
+            </div>        
+        </div>
+
+    </div>
+</form>
+
+<div style="clear: both;"></div>
 
 <p-dataTable [value]="lists" [rows]="10" [paginator]="true" [pageLinks]="3" [rowsPerPageOptions]="[5,10,20]">
     
