@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewContainerRef } from '@angular/core';
+
+import { TranslateService } from '@ngx-translate/core';
+
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import { Header} from 'primeng/primeng';
 import { Footer } from 'primeng/primeng';
@@ -15,8 +19,14 @@ export class ListsComponent implements OnInit {
 
     lists: Lists[];
 
-    constructor( private _listsService: ListsService,
+    constructor( private translate: TranslateService,
+                 private toastr: ToastsManager,
+                 vcr: ViewContainerRef,
+                 private _listsService: ListsService,
                  private _breadcrumbService: BreadcrumbService ) {
+
+        this.toastr.setRootViewContainerRef(vcr);
+        
 
     }
 
@@ -27,6 +37,10 @@ export class ListsComponent implements OnInit {
             console.log("lists: ", this.lists);
         });
 
+    }
+
+    showToastrError(){
+        this.toastr.error('We have a lot errors :DDD')
     }
 
 }

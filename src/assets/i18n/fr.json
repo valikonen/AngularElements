@@ -6,5 +6,8 @@
     },
     "Aboutpage": {
         "TranslationSections": "Nous sommes letsboot"
+    },
+    "grid_lists": {
+        "short_name": "Short Name FR"
     }
 }
