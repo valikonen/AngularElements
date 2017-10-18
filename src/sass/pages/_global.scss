@@ -1,0 +1,66 @@
+html,
+body {
+	background: #dedede;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: sans-serif;
+	overflow-x:hidden;
+}
+.container-fluid {
+	background: #f3f3f3;
+	min-height: calc(100vh - #{$footer-height});
+}
+.main {
+	float: left;
+	width: 100%;
+	min-height: 50vh;
+}
+.container-fixed {
+	width: 1240px;
+	min-height: 100%;
+	margin: 0 auto;
+}
+
+#page-container {
+	padding-left: 250px;
+	position: relative;
+	border-top: 1px solid $color-5;
+	min-height: 650px;
+}
+
+#page-content {
+	width: 100%;
+	padding: 0px;
+	position: relative;
+}
+.p-content {
+	@extend %transition-effect;
+	padding: 10px 0px 0px 10px;
+	opacity: 1;
+	height: 100%;
+}
+.p-content.display-none {
+	@extend %transition-effect;
+	opacity: 0;
+	height: 0;
+    overflow-y: auto;
+	display: block;
+	
+}
+
+.green {
+	color: #00c400;
+}
+
+.red {
+	color : #e20000;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cursor-normal {
+    cursor: default;
+}

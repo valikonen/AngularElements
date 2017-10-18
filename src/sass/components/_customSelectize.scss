@@ -1,0 +1,48 @@
+.selectize-control.single {
+    float: right;
+    width: 63%;
+    .selectize-input {
+        height: 34px;
+        &:after {
+            right: 5px;
+        }
+        cursor: default;
+        border: 1px solid rgb(204, 204, 204);
+        background-color: $color-3;
+        background-image: none;
+        border-radius: $border-radius;
+        input {
+            float: left !important
+        }
+    }
+}
+
+#sideBarSearch .selectize-control.single,
+#addRowForm .selectize-control.single {
+    width: 100%;
+    .selectize-input {
+        height: 30px;
+        color: #555;
+        font-size: 14px;
+    }
+}
+
+.selectize-dropdown {
+    &.single {
+        z-index: 10000;
+    }
+    .option {
+        min-height: 1.2em;
+    }
+    .selectize-dropdown-content {
+        line-height: $font-size;
+    }
+    cursor: default;
+    .active {
+        color: $color-3;
+        background-color: rgb(59, 153, 252);
+    }
+    .option {
+        cursor: default;
+    }
+}

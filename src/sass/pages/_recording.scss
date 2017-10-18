@@ -1,0 +1,104 @@
+.recording-form {
+    legend {
+        width: auto;
+        padding: 0;
+        font-size: $font-size + 2;
+        line-height: inherit;
+        color: $color-1;
+        border: 0;
+        margin-bottom: 0px;
+        cursor: pointer;
+    }
+    .form-group {
+        width: 100%;
+    }
+    input[type="text"],
+    input[type="file"],
+    select.form-control,
+    textarea.form-control,
+    .input-group {
+        float: right;
+        width: 63%;
+    }
+    label {
+        width: 35%;
+        max-width: 165px;
+        vertical-align: sub;
+        margin-bottom: 0;
+        margin-top: 4px;
+    }
+    .btn {
+        position: relative;
+        z-index: 10;
+    }
+}
+
+// .form-inline.recording-form {
+//     .input-group-btn {
+//         width: 35px;
+//     }
+// }
+@-moz-document url-prefix() {
+    .recording-form .input-group-btn .btn {
+        padding: 16% 12px 15% 12px;
+        max-height: 34px;
+    }
+}
+
+.recording-form textarea.form-control {
+    float: right;
+    width: 88.2%;
+}
+
+.recording-programs-header {
+    .add-version {
+        margin-top: 8px;
+    }
+    button {
+        margin-top: 7px;
+    }
+}
+
+
+/* styling for required select tags in editable grids */
+
+
+/* to do: fix for IE */
+
+.recording-form {
+    select:required:invalid {
+        color: gray;
+    }
+    option[value=""][disabled] {
+        display: none;
+    }
+    option {
+        color: $color-5;
+    }
+}
+
+div.ui-grid-cell-contents.invalid {
+    @include box-shadow(inset 0px 0px 3px 1px #ff5555);
+}
+
+.add-record-button {
+    cursor: pointer;
+    border: 0px;
+    background: none;
+    &:hover {
+        color: $color-2;
+        text-decoration: none;
+    }
+    &[disabled] {
+        color: lightgray;
+    }
+}
+
+#date-birth-grid,
+#identity-documents-grid {
+    #addRowForm {
+        .form-control {
+            margin-bottom: 3px;
+        }
+    }
+}

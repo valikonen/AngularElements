@@ -1,0 +1,20 @@
+fieldset {
+    @include border;
+    padding: 20px;
+    margin: 20px 0 10px 0;
+    i.fa-caret-down,
+    .fa-caret-right {
+        cursor: pointer;
+    }
+}
+.border-green {
+    legend {
+        width: auto;
+        padding: 0;
+        font-size: 16px;
+        line-height: inherit;
+        color: $color-1;
+        border: 0;
+        margin-bottom: 0;
+    }
+}

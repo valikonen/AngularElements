@@ -1,0 +1,53 @@
+.bottom-footer {
+	border-top: 2px solid $color-1;
+	padding: 8px 6px;
+	background-color: $color-3;
+	height: $footer-height;
+	overflow: auto;
+}
+
+.bottom-footer {
+	nav {
+		float: right;
+		padding-top: 10px
+	}
+	li {
+		display: inline;
+		padding-top: 8px;
+		border-top: 0;
+		a {
+			@extend %transition-effect;
+			font-family: $font-1;
+			font-size: $font-size - 2;
+			color: $color-4;
+			text-decoration: none;
+			padding: 3px 3px 6px 3px;
+			&:hover {
+				color: $color-1;
+			}
+		}
+	}
+	img {
+		width: 165px; 
+		height: 37px; 
+	}
+}
+.baseline {
+	font-family: $font-1;
+	font-size: $font-size;
+	padding: 10px 0px 0px 30px;
+	float: left;
+	color: $color-5;
+	margin: 0;
+	height: 28px;
+	height: 1.75rem;
+}
+
+#footer {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	margin-top: 0;
+	height: 60px;
+	clear: both;
+}

@@ -1,0 +1,32 @@
+button,
+button:active,
+button:focus,
+button:hover,
+.btn,
+.btn:active,
+.btn:focus,
+.btn:hover {
+	outline: none;
+}
+.btn-success {
+	background: $color-1;
+}
+.del-list {
+	margin-bottom: 5px;
+    margin-right: 15px;
+}
+.btn-search {
+	float: right;
+	font-size: $font-size + 14;
+	background-color: #85b347;
+}
+.btn-success {
+	@extend %transition-effect;
+	color: $color-3;
+	background: $color-1;
+	border-color: $color-1;
+	&:hover {
+		background: darken($color-1, 6);
+		color: darken($color-3, 8);
+	}
+}

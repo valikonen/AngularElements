@@ -1,0 +1,184 @@
+#create-list,
+#SubscriberForm,
+.regliss-create-edit-form {
+	input[type="text"],
+	select,
+	input[type="number"] {
+		@include border-radius;
+		width: 53%;
+	}
+}
+#create-list,
+#SubscriberForm,
+.regliss-create-edit-form  {
+	textarea {
+		@include border-radius;
+		width: 53.7%;
+	}
+}
+#create-list,
+#SubscriberForm {
+	margin-top: 20px;
+	#activated {
+		@include box-shadow(null);;
+	}
+}
+#lists {
+	margin: 20px 0 10px 0;
+	.fa.fa-plus {
+		vertical-align: bottom;
+	}
+}
+.regliss-create-edit-form.form-inline {
+	// fieldset {
+	// 	min-height: 239px;
+	// }
+	legend {
+		width: auto;
+		padding: 0;
+		font-size: $font-size + 2;
+		line-height: inherit;
+		color: $color-1;
+		border: 0;
+		margin-bottom: 0px;
+	}
+}
+
+.regliss-create-edit-form {
+	margin-top: 20px;
+	label {
+		min-width: 45%;
+	}
+	.form-group {
+		width: 100%;
+	}
+	textarea {
+		width: 53%;
+		min-height: 100px;
+	}
+}
+
+#comment,
+#commentEn {
+    @include border-radius;
+	width: 100%;
+}
+
+
+#reglementary-add-text {
+	.form-control {
+		margin-bottom: 0;
+	}
+}
+.regliss-create-edit-form {
+	.alert {
+		@include border(1px, solid, transparent);
+		@include border-radius;
+		padding: 0 5px;
+		margin-bottom: 10px;
+	}
+}
+.create-list-header {
+	font-size: $font-size + 2;
+	background-color: $color-1;
+	height: 40px;
+	padding: 10px;
+	a {
+		color: $color-3;
+	}
+}
+.create-list-header a,
+.add-version {
+	@extend %transition-effect;
+}
+.create-list-header a:hover,
+.add-version:hover {
+	color: $color-2;
+	text-decoration: none;
+}
+#broadcast-list-form {
+	margin-bottom: 30px;
+}
+#import-file-form,
+.import-file {
+	.input-group {
+		span,
+		label {
+			@extend %transition-effect;
+			cursor: pointer;
+			color: $color-3;
+			background: $color-1;
+			max-width: 20px;
+			&:hover {
+				background: darken($color-1, 6);
+				color: darken($color-3, 8);
+			}
+		}
+	}
+}
+.import-file {
+	.input-group {
+		label {
+			min-width: auto;
+			max-width: 20%;
+		}
+	}
+}
+#list-import-file {
+	select {
+		margin-left: 5px;
+		min-width: 50%;
+	}
+}
+.import-automatic {
+	label {
+		min-width: 190px;
+	}
+	input[type="text"],
+	select {
+		min-width: 180px;
+	}
+}
+.add-user {
+	label {
+		min-width: 100px;
+	}
+	input[type="text"],
+	select {
+		min-width: 220px;
+		max-width: 220px;
+	}
+	.search-for-input {
+		border: none;
+		background: none;
+	}
+	
+	.alert-danger {
+		float: none;
+	}
+	.add-user-btn {
+		margin: 0 auto 0 10px;
+		display: block;
+		float: left;
+		background: none;
+		border: none;
+		i.grid-cell-icon {
+			vertical-align: middle;
+			font-size: 30px;
+			color: $color-1;
+		}
+	}
+	#grid-add-row {
+		height: auto;
+		label {
+			max-width: inherit;
+			margin-left: 10px;
+		}
+	}
+	.rowgroup {
+		.fa {
+			vertical-align: text-top;
+		}
+	}
+	
+}

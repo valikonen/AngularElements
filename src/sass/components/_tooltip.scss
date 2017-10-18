@@ -1,0 +1,20 @@
+.tooltip-inner {
+	word-wrap: break-word;
+    background: #007955;
+}
+.tooltip.top .tooltip-arrow {
+      border-top-color: #007955;
+} 
+.tooltip-line-break {
+	white-space: pre-wrap;
+}
+.tooltip.top.tooltip-line-break .tooltip-inner {
+    bottom: -17px;
+    position: relative;
+}
+.tooltip.top.tooltip-line-break {
+    margin-top: 0;
+}
+.tooltip.top.tooltip-line-break .tooltip-arrow {
+    bottom: 0;
+}

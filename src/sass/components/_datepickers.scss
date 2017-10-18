@@ -1,0 +1,22 @@
+input[readonly].datepicker {
+	background-color: #FFFFFF;
+}
+
+.datepicker-grid {
+	width: 85% !important;
+	float: left !important;
+	height: 30px !important;
+}
+
+.datepicker-grid.input-group-btn {
+		width: 15% !important;
+		float: right !important;
+		padding: 0 !important;
+		height: 28px !important;
+		line-height: 28px !important;
+}
+
+.btn-datepicker{
+	cursor: pointer;
+	background-color: #fff;
+}

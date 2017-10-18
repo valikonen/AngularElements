@@ -1,0 +1,67 @@
+.modal-header {
+	padding: 1px 0 0 5px;
+	border-width: 0;
+}
+.modal-header i {
+    font-size: $font-size + 24;
+    display: inline-block;
+    margin: 10px 0 0 25px;
+}
+.modal-header h3 {
+    position: relative;
+    top: -5px;
+}
+.modal-title {
+    display: inline-block;
+    margin-left: 10px;
+}
+.modal-dialog {
+    padding: 30px;
+}
+.modal-content {
+	@include border-radius(0);
+	background-color: #dadada;
+}
+.modal-body {
+    padding-left: 30px;
+}
+.modal-lg {
+	width: 500px;
+}
+
+.btn-modal {
+	@include border-radius(0);
+	background-color: #00965f;
+	color: $color-3;
+}
+#record-add .modal-title {
+    display: block;
+	border-bottom: 1px solid #e5e5e5;
+	margin-left: 0;
+}
+#record-add .modal-header {
+    padding: 0;
+}
+#record-add .modal-header h3 {
+    position: relative;
+    top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+} 
+#record-add .form-group {
+	width: 100%;
+}
+#record-add .form-group select {
+	@include border-radius;
+	width: 100%;
+	font-size: $font-size + 2;
+}
+#record-add .form-group label {
+	margin-top: 10px;
+}
+.modal-large {
+	width: 90%;
+	.table-responsive {
+		max-height: 65vh;
+	}
+}

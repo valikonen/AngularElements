@@ -19,16 +19,14 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css",       
+        "styles.scss",
         "../node_modules/font-awesome/css/font-awesome.css",
-        "../node_modules/primeng/resources/themes/ludvig/theme.css", 
+        "../node_modules/primeng/resources/themes/ludvig/theme.css",
         "../node_modules/primeng/resources/primeng.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
         "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css"
       ],
-      "scripts": [
-        
-      ],
+      "scripts": [],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -61,7 +59,8 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
-    "component": {}
+    "styleExt": "scss",
+    "component": {
+    }
   }
 }

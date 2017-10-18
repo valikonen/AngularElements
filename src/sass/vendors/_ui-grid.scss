@@ -1,0 +1,370 @@
+    /*Important for Mozilla pagination bug*/
+    
+    .ui-grid,
+    .ui-grid-viewport {
+        //   height: auto;
+    }
+    
+    #record-relations-grid,
+    #address-grid,
+    #alias-grid,
+    #date-birth-grid,
+    #identity-doc-grid,
+    #nationalities-grid,
+    #programs-grid {
+        margin-bottom: 0;
+    }
+    
+    .grid-style {
+        margin: 0;
+        height: 500px;
+        margin-bottom: 30px;
+        .custom-checkbox {
+            margin-left: 5px;
+        }
+        .btn.btn-default {
+            padding: 3px 12px 4px 12px;
+        }
+    }
+    
+    .grid-style .ui-grid-pager-control {
+        min-width: 380px;
+    }
+    
+    .ui-grid-pager-control .ui-grid-pager-max-pages-number {
+        vertical-align: text-top;
+    }
+    
+    .ui-grid-pager-panel {
+        background: $color-2;
+    }
+    
+    .ui-grid-pager-panel span.ui-grid-pager-row-count-label {
+        display: inline-block;
+        vertical-align: sub;
+    }
+    
+    .ui-grid-row:nth-child(even) .ui-grid-cell {
+        background-color: #e6f4ef;
+    }
+    
+    .ui-grid-row-selected.ui-grid-row:nth-child(odd) .ui-grid-cell,
+    .ui-grid-row-selected.ui-grid-row:nth-child(even) .ui-grid-cell {
+        color: $color-3;
+        background-color: $color-1;
+    }
+    
+    .ui-grid-row-selected.ui-grid-row:nth-child(odd) .ui-grid-cell.ui-grid-cell-focus,
+    .ui-grid-row-selected.ui-grid-row:nth-child(even) .ui-grid-cell.ui-grid-cell-focus {
+        outline: 0;
+        background-color: $color-1;
+    }
+    
+    .ui-grid-row-selected.ui-grid-row:nth-child(odd):hover .ui-grid-cell,
+    .ui-grid-row-selected.ui-grid-row:nth-child(even):hover .ui-grid-cell {
+        color: $color-3;
+        background-color: $color-1;
+    }
+    
+    .ui-grid-header-cell {
+        font-family: $font-1;
+        font-size: 1.05em;
+        background-color: $color-2;
+    }
+    
+    .ui-grid-top-panel {
+        font-weight: normal;
+    }
+    
+    div.ui-grid-cell input {
+        border-radius: 1;
+    }
+    
+    .ui-grid-header-cell .ui-grid-cell-contents {
+        white-space: normal;
+        -ms-text-overflow: clip;
+        text-overflow: clip;
+        overflow: visible;
+    }
+    
+    .grid-cell-icon {
+        font-size: $font-size + 6;
+        width: 100%;
+        text-align: center;
+        vertical-align: bottom;
+    }
+    
+    .ui-grid-pager-panel input[type="number"] {
+        width: inherit;
+    }
+    
+    .no-rows {
+        display: none;
+        position: relative;
+        top: -64px;
+        .msg {
+            text-align: center;
+            font-size: $font-size + 1;
+            padding: 5px 0;
+        }
+    }
+    
+    .recording-form {
+        .grid-style {
+            .input-group {
+                width: 100%;
+                float: none;
+            }
+        }
+    }
+    
+    #grid-add-row {
+        height: 40px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 2px;
+        background: lightgray;
+        position: relative;
+        z-index: 32;
+        .row-form-input {
+            @extend %add-row-inputs;
+            width: 18.67%;
+            input {
+                @include border-radius(4px);
+                height: 30px;
+                width: 100%;
+            }
+            input[type="text"],
+            select {
+                @include border-radius(4px);
+            }
+        }
+        .row-form-select {
+            @extend %add-row-inputs;
+            // width: 23%;
+            select{
+                @include border(1px, solid, #ccc);
+                height: 28px !important;
+                width: 100%;
+            }
+        }
+        .width-30 {
+            width: 31.3%;
+        }
+        .input-group {
+            width: 100%;
+        }
+    }
+
+    #record-export-grid{
+        height: 590px;
+        .ui-grid-viewport .ui-grid-cell-contents {
+            word-wrap: break-word;
+            white-space: normal !important;
+          }
+          
+          .ui-grid-row, .ui-grid-cell {
+            height: auto !important;
+          }
+          
+          .ui-grid-row div[role=row] {
+            display: -webkit-flex;
+            display: flex;
+            display: -ms-flex;
+            align-content: stretch;
+          }
+          .ui-grid-cell-contents {
+              overflow: visible !important;
+          }
+          .multiselect-models{
+            border: 1px solid #23a9e1;
+            border-radius: 4px;
+            padding: 4px;
+            margin-bottom: 4px;
+            font-size: 11px;
+          }
+    }
+    
+    #addRowForm {
+        float: left;
+        width: 100%;
+        .custom-checkbox {
+            margin-left: 10px;
+        }
+        input[type='text'],
+        select {
+            min-height: 30px;
+        }
+        .input-group {
+            .input-group-addon {
+                background: $color-3;
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                padding: 2px 12px;
+            }
+            .datepicker {
+                float: left;
+                width: 75%;
+            }
+        }
+    }
+    
+    .ui-grid-viewport {
+        .input-group {
+            .input-group-addon {
+                background: $color-3;
+                display: inline-block;
+                height: 30px;
+                line-height: 30px;
+                padding: 2px 12px;
+            }
+            .datepicker {
+                float: left;
+                width: 75%;
+                min-height: 30px;
+            }
+        }
+    }
+    
+    .row-form-btns-group {
+        max-width: 45px;
+        width: 100%;
+        margin: 5px auto 0 10px;
+        // line-height: 28px;
+        // height: 28px;
+        display: block;
+        float: left;
+        button {
+            margin: 0;
+            padding: 0;
+        }
+        .add-record-button-grid {
+            float: left;
+        }
+        .fa-pencil-square-o,
+        .fa-check-square-o {
+            margin-top: 1px;
+        }
+    }
+    
+    #alias-record {
+        #grid-add-row {
+            .row-form-input,
+            .row-form-select {
+                width: 13.3%;
+                margin-right: 2px;
+            }
+        }
+    }
+    
+    #sanction-reference-record {
+        #grid-add-row {
+            .row-form-input,
+            .row-form-select {
+                width: 23.3%;
+                margin-right: 2px;
+            }
+        }
+        #addRowForm .input-group .datepicker {
+            float: left;
+            width: 84%;
+        }
+    }
+    
+    #record-sources {
+        #grid-add-row {
+            .row-form-input,
+            .row-form-select {
+                width: 93.5%;
+                margin-right: 2px;
+            }
+        }
+    }
+    
+    #record-relations {
+        #grid-add-row {
+            .row-form-input,
+            .row-form-select {
+                width: 18.5%;
+                margin-right: 2px;
+            }
+        }
+    }
+    
+    #date-birth-grid {
+        .row-form-input,
+        .row-form-select {
+            width: 15.54%;
+            margin-right: 2px;
+        }
+        // .input-group-btn {
+        // 	.btn {
+        // 		padding: 0 12px 0 12px;
+        // 		height: 30px;
+        // 		line-height: 30px;
+        // 	}
+        // }
+    }
+    
+    #grid-add-row {
+        .nationalities-add-row {
+            .row-form-select,
+            .row-form-select,
+            .row-form-checkbox {
+                margin-right: 2px;
+            }
+            .row-form-input {
+                width: 23.65%;
+            }
+            .row-form-checkbox {
+                width: 22.8%;
+                float: left;
+            }
+            .row-form-select {
+                width: 23.3%;
+            }
+        }
+        .address-add-row {
+            .row-form-input,
+            .row-form-select {
+                width: 13.3%;
+                margin-right: 2px;
+            }
+        }
+    }
+    
+    #identity-documents-grid {
+        .row-form-input,
+        .row-form-select {
+            width: 15.54%;
+            margin-right: 2px;
+        }
+        // .input-group-btn .btn {
+        // 	padding: 0 12px 0 12px;
+        // 	height: 30px;
+        // 	line-height: 30px;
+        // }
+    }
+    
+    .add-record-button-grid {
+        max-height: 28px;
+        background: transparent;
+        border: none;
+        outline: none;
+    }
+    
+    #rowFormSelect {
+        width: 100%;
+        .form-control,
+        select {
+            width: 100%;
+        }
+    }
+    
+    .subscriber-add-row {
+        .row-form-select {
+            width: 23.1%;
+            margin-right: 2px;
+        }
+    }

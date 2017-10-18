@@ -1,0 +1,37 @@
+.table-bordered th {
+	text-align: center;
+	background-color: $color-3 !important;
+}
+
+.table > thead > tr > th,
+.table > tbody > tr > th,
+.table > tfoot > tr > th,
+.table > thead > tr > td,
+.table > tbody > tr > td,
+.table > tfoot > tr > td {
+	@include border(2px, solid, #f0f0f0 );
+}
+#modal-errors {
+	.table-striped {
+		color: #333;
+		background: $color-3;
+		thead {
+			tr {
+				background: $color-2;
+			}
+		}
+		
+		tbody {
+			font-size: $font-size - 1;
+			> tr:nth-of-type(2n+1) {
+				background: #e6f4ef;
+			}
+		}
+		tr {
+			td:first-child {
+				min-width: 170px;
+			}
+		}
+	}
+}
+

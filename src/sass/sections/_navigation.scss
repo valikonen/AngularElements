@@ -1,0 +1,126 @@
+.navbar-bnp {
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    padding-right: 9px;
+    img {
+        max-width: 220px;
+        height: auto;
+    }
+}
+
+.navbar {
+    @include border-radius(0);
+    border-width: 0px;
+    .fa-home {
+        font-size: $font-size + 8;
+    }
+    .home-ico {
+        a {
+            padding: 12px 15px;
+        }
+    }
+}
+
+.navbar-bnp {
+    @include border-radius(0);
+    font-family: $font-1;
+    font-size: $font-size + 2;
+    margin-top: -6px;
+    height: 76px;
+    color: $color-5;
+    background-color: $color-3;
+    .nav>li>a {
+        color: $color-5;
+        margin-top: 22px;
+        padding: 10px 4px 1px 2px;
+    }
+}
+
+.nav>li>a>div {
+    float: right;
+    margin-left: 5px;
+}
+
+.navbar-inverse {
+    background: $color-4;
+    color: $color-3;
+    .navbar-brand,
+    .navbar-nav>li>a {
+        text-shadow: none;
+        color: $color-3;
+    }
+}
+
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.open>a,
+.navbar-inverse .navbar-nav>ul>li,
+.navbar-inverse .navbar-nav>li.focus>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover,
+.navbar-inverse .navbar-nav>.active>a:visited {
+    @extend %transition-effect;
+    background-color: $color-1;
+    color: $color-3;
+}
+
+// .navbar-inverse .navbar-nav>li:hover>a:hover {
+// 	@extend %transition-effect;
+// 	background-color: $color-1;
+// 	color: $color-3;
+// }
+nav.navbar,
+nav.navbar.navbar-inverse {
+    margin-bottom: 0 !important;
+}
+
+.header-right-menu {
+    float: right;
+    width: 191px;
+    @extend %ul-reset;
+    margin-top: 18px;
+    a {
+        @extend %transition-effect;
+        float: left;
+        text-align: right;
+        padding: 10px 0 10px 20px;
+        color: $color-5;
+        font-size: $font-size - 2;
+        position: relative;
+        &:hover {
+            text-decoration: none;
+            color: $color-1;
+        }
+        &:after {
+            content: "|";
+            position: absolute;
+            z-index: 3;
+            right: -10px;
+            font-size: $font-size;
+        }
+    }
+}
+
+.header-right-menu {
+    li:last-child a {
+        &:after {
+            content: "";
+        }
+    }
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu,
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a {
+    background: $color-4;
+    color: $color-3;
+}
